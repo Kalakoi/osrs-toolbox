@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "osrs-toolbox", "osrs-toolbox\osrs-toolbox.csproj", "{0AE3D94A-F815-4986-9881-DC1CF3D97AD2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0AE3D94A-F815-4986-9881-DC1CF3D97AD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AE3D94A-F815-4986-9881-DC1CF3D97AD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AE3D94A-F815-4986-9881-DC1CF3D97AD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AE3D94A-F815-4986-9881-DC1CF3D97AD2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7A02BBF-4456-4CA7-A3A9-D52332E5E5F4}
+	EndGlobalSection
+EndGlobal
