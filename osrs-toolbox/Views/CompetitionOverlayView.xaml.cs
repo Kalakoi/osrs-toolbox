@@ -19,9 +19,12 @@ namespace osrs_toolbox
     /// </summary>
     public partial class CompetitionOverlayView : Window
     {
+        public static CompetitionOverlayView Current;
+
         public CompetitionOverlayView()
         {
             InitializeComponent();
+            Current = this;
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
