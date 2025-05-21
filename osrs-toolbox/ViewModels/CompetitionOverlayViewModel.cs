@@ -14,11 +14,31 @@ namespace osrs_toolbox
             InitializeTimer();
         }
 
+        public CompetitionOverlayViewModel(string Username, int GroupID, int CompetitionID)
+        {
+            InitializeVariables(Username, GroupID, CompetitionID);
+            InitializeCommands();
+            InitializeTimer();
+        }
+
         private void InitializeVariables()
         {
             CompetitionID = 80030;
             GroupID = 11197;
             PlayerName = "kalakoi";
+            TestOutput = string.Empty;
+            GridOutput = new StackPanel();
+            ControlsVisible = Visibility.Visible;
+            ToggleButtonText = "V";
+            HideOtherPlayers = false;
+            HideZeroKC = false;
+        }
+
+        private void InitializeVariables(string Username, int GroupID, int CompetitionID)
+        {
+            this.CompetitionID = CompetitionID;
+            this.GroupID = GroupID;
+            PlayerName = Username;
             TestOutput = string.Empty;
             GridOutput = new StackPanel();
             ControlsVisible = Visibility.Visible;
