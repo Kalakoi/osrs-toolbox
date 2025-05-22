@@ -16,9 +16,12 @@ namespace osrs_toolbox
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow Current;
+
         public MainWindow()
         {
             InitializeComponent();
+            Current = this;
         }
     }
 }
