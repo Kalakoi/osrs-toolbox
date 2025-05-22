@@ -7,10 +7,15 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>fantasy_toolbox_icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Resources\SplashScreenLogo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="fantasy_toolbox_icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
