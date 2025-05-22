@@ -50,7 +50,7 @@ namespace osrs_toolbox
         {
             DispatcherTimer dt = new DispatcherTimer();
             dt.Interval = TimeSpan.FromSeconds(5);
-            dt.Tick += new EventHandler(TimerTickAsync);
+            dt.Tick += new EventHandler(TimerTick);
             dt.Start();
         }
 
