@@ -28,7 +28,7 @@ namespace osrs_toolbox
             PlayerName = "kalakoi";
             GridOutput = new StackPanel();
             HideOtherPlayers = false;
-            HideZeroKC = false;
+            HideZeroGained = false;
         }
 
         private void InitializeVariables(string Username, int GroupID, int CompetitionID)
@@ -38,7 +38,7 @@ namespace osrs_toolbox
             PlayerName = Username;
             GridOutput = new StackPanel();
             HideOtherPlayers = false;
-            HideZeroKC = false;
+            HideZeroGained = false;
         }
 
         private void InitializeCommands()
@@ -156,7 +156,7 @@ namespace osrs_toolbox
                 bool AddToDisplay = true;
                 if (HideOtherPlayers && PlayerName.ToUpper() != cp.player.displayName.ToUpper())
                     AddToDisplay = false;
-                else if (HideZeroKC && cp.progress.gained == 0 && PlayerName.ToUpper() != cp.player.displayName.ToUpper())
+                else if (HideZeroGained && cp.progress.gained == 0 && PlayerName.ToUpper() != cp.player.displayName.ToUpper())
                     AddToDisplay = false;
 
                 if (AddToDisplay)
@@ -268,7 +268,7 @@ namespace osrs_toolbox
                 bool AddToDisplay = true;
                 if (HideOtherPlayers && PlayerName.ToUpper() != cp.player.displayName.ToUpper())
                     AddToDisplay = false;
-                else if (HideZeroKC && cp.progress.gained == 0 && PlayerName.ToUpper() != cp.player.displayName.ToUpper())
+                else if (HideZeroGained && cp.progress.gained == 0 && PlayerName.ToUpper() != cp.player.displayName.ToUpper())
                     AddToDisplay = false;
 
                 if (AddToDisplay)

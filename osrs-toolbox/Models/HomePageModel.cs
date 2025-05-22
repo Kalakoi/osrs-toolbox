@@ -39,10 +39,10 @@ namespace osrs_toolbox
             get { return _hideOtherPlayers; }
             set { SetProperty(ref _hideOtherPlayers, value, nameof(HideOtherPlayers)); }
         }
-        public bool HideZeroKC
+        public bool HideZeroGained
         {
             get { return _hideZeroKC; }
-            set { SetProperty(ref _hideZeroKC, value, nameof(HideZeroKC)); }
+            set { SetProperty(ref _hideZeroKC, value, nameof(HideZeroGained)); }
         }
 
         public ICommand ToggleCompetitionOverlay
