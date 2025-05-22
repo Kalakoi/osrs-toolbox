@@ -31,7 +31,10 @@ namespace osrs_toolbox
         private void DoToggleCompetitionOverlay(object obj)
         {
             if (CompetitionOverlayView.Current != null)
+            {
                 CompetitionOverlayView.Current.Close();
+                CompetitionOverlayView.Current = null;
+            }
             else
             {
                 CompetitionOverlayView cov = new CompetitionOverlayView();
