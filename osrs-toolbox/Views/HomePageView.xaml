@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:osrs_toolbox"
         mc:Ignorable="d"
-        Title="OSRS Toolbox" d:Height="450" d:Width="800" SizeToContent="WidthAndHeight">
+        Title="OSRS Toolbox" d:Height="450" d:Width="800" SizeToContent="WidthAndHeight" Closed="Window_Closed">
     <Window.DataContext>
         <local:HomePageViewModel/>
     </Window.DataContext>
@@ -25,12 +25,12 @@
         </Grid.ColumnDefinitions>
         <TextBlock Text="Competition Overlay Testing" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" TextDecorations="Underline" Margin="3"/>
         <TextBlock Text="Player Name:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
-        <TextBlock Text="Group ID:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
+        <!--TextBlock Text="Group ID:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/-->
         <TextBlock Text="Competition ID:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
         <TextBlock Text="Hide Other Players:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
         <TextBlock Text="Hide Zero Gained:" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
         <TextBox Text="{Binding PlayerName, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="3"/>
-        <TextBox Text="{Binding GroupID, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="3"/>
+        <!--TextBox Text="{Binding GroupID, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="3"/-->
         <TextBox Text="{Binding CompetitionID, UpdateSourceTrigger=PropertyChanged}" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="3"/>
         <CheckBox IsChecked="{Binding HideOtherPlayers, UpdateSourceTrigger=PropertyChanged}" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
         <CheckBox IsChecked="{Binding HideZeroGained, UpdateSourceTrigger=PropertyChanged}" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>

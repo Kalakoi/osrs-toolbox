@@ -26,5 +26,12 @@ namespace osrs_toolbox
             InitializeComponent();
             Current = this;
         }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            foreach (Window w in Application.Current.Windows)
+                w.Close();
+            Application.Current.Shutdown();
+        }
     }
 }
