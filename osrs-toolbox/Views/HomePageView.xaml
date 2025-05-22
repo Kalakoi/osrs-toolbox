@@ -28,7 +28,7 @@
         <TextBlock Text="Group ID:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
         <TextBlock Text="Competition ID:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
         <TextBlock Text="Hide Other Players:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
-        <TextBlock Text="Hide Zero KC:" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
+        <TextBlock Text="Hide Zero Gained:" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
         <TextBox Text="{Binding PlayerName, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="3"/>
         <TextBox Text="{Binding GroupID, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="3"/>
         <TextBox Text="{Binding CompetitionID, UpdateSourceTrigger=PropertyChanged}" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="3"/>
