@@ -9,7 +9,8 @@
     <Window.DataContext>
         <local:HomePageViewModel/>
     </Window.DataContext>
-    <Grid>
+    <StackPanel>
         <Button Command="{Binding OpenCompetitionOverlaySettings, UpdateSourceTrigger=PropertyChanged}" Content="Open Competition Overlay Settings" Margin="3" Padding="3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-    </Grid>
+        <Button Command="{Binding OpenDropChanceCalculator, UpdateSourceTrigger=PropertyChanged}" Content="Open Drop Chance Calculator" Margin="3" Padding="3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </StackPanel>
 </Window>

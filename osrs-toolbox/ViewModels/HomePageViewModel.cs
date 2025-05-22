@@ -23,6 +23,7 @@ namespace osrs_toolbox
         private void InitializeCommands()
         {
             OpenCompetitionOverlaySettings = new RelayCommand(DoOpenCompetitionOverlaySettings);
+            OpenDropChanceCalculator = new RelayCommand(DoOpenDropChanceCalculator);
         }
 
         private void DoOpenCompetitionOverlaySettings(object obj)
@@ -36,6 +37,20 @@ namespace osrs_toolbox
             {
                 CompetitionOverlaySettingsView cosv = new CompetitionOverlaySettingsView();
                 cosv.Show();
+            }
+        }
+
+        private void DoOpenDropChanceCalculator(object obj)
+        {
+            if (DropChanceView.Current != null)
+            {
+                DropChanceView.Current.Close();
+                DropChanceView.Current = null;
+            }
+            else
+            {
+                DropChanceView dcv = new DropChanceView();
+                dcv.Show();
             }
         }
     }
