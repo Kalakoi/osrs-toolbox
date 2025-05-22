@@ -33,7 +33,7 @@
         <TextBox Text="{Binding GroupID, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="3"/>
         <TextBox Text="{Binding CompetitionID, UpdateSourceTrigger=PropertyChanged}" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="3"/>
         <CheckBox IsChecked="{Binding HideOtherPlayers, UpdateSourceTrigger=PropertyChanged}" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
-        <CheckBox IsChecked="{Binding HideZeroKC, UpdateSourceTrigger=PropertyChanged}" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
+        <CheckBox IsChecked="{Binding HideZeroGained, UpdateSourceTrigger=PropertyChanged}" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
         <Button Command="{Binding ToggleCompetitionOverlay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="3" Padding="3" Content="Toggle Competition Overlay"/>
     </Grid>
 </Window>
