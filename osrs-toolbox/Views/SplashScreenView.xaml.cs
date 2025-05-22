@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace osrs_toolbox
 {
@@ -20,11 +21,16 @@ namespace osrs_toolbox
     public partial class SplashScreenView : Window
     {
         public static SplashScreenView Current;
+        private DispatcherTimer timer;
 
         public SplashScreenView()
         {
             InitializeComponent();
             Current = this;
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(15);
+            timer.Tick += new EventHandler(TimerTick);
+            timer.Start();
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -41,6 +47,13 @@ namespace osrs_toolbox
                 HomePageView.Current.Show();
                 this.Close();
             }
+        }
+
+        private void TimerTick(object sender, EventArgs e)
+        {
+            Application.Current.MainWindow = HomePageView.Current;
+            HomePageView.Current.Show();
+            this.Close();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
