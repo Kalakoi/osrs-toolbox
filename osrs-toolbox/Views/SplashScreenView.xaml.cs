@@ -51,6 +51,7 @@ namespace osrs_toolbox
 
         private void TimerTick(object sender, EventArgs e)
         {
+            timer.Stop();
             Application.Current.MainWindow = HomePageView.Current;
             HomePageView.Current.Show();
             this.Close();
