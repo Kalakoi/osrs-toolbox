@@ -5,10 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:osrs_toolbox"
         mc:Ignorable="d"
-        Title="OSRS Toolbox" SizeToContent="WidthAndHeight" AllowsTransparency="True" Background="Transparent" WindowStyle="None" ResizeMode="NoResize" MouseDown="Window_MouseDown" WindowStartupLocation="CenterScreen">
-    <Window.DataContext>
-        <local:SplashScreenViewModel/>
-    </Window.DataContext>
+        Title="OSRS Toolbox" SizeToContent="WidthAndHeight" AllowsTransparency="True" Background="Transparent" WindowStyle="None" ResizeMode="NoResize" MouseDown="Window_MouseDown" WindowStartupLocation="CenterScreen" PreviewKeyDown="Window_PreviewKeyDown" Loaded="Window_Loaded">
     <Grid>
         <Image Source="/Resources/SplashScreenLogo.png" MaxHeight="540"/>
     </Grid>

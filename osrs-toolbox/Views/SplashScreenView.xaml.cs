@@ -32,5 +32,21 @@ namespace osrs_toolbox
             if (e.LeftButton == MouseButtonState.Pressed)
                 DragMove();
         }
+
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+            {
+                Application.Current.MainWindow = HomePageView.Current;
+                HomePageView.Current.Show();
+                this.Close();
+            }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            HomePageView hp = new HomePageView();
+            //TODO: Handle loading of data into datacontext, then open home screen
+        }
     }
 }
