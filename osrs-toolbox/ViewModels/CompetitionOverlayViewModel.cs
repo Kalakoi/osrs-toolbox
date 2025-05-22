@@ -26,10 +26,7 @@ namespace osrs_toolbox
             CompetitionID = 80030;
             GroupID = 11197;
             PlayerName = "kalakoi";
-            TestOutput = string.Empty;
             GridOutput = new StackPanel();
-            ControlsVisible = Visibility.Visible;
-            ToggleButtonText = "V";
             HideOtherPlayers = false;
             HideZeroKC = false;
         }
@@ -39,10 +36,7 @@ namespace osrs_toolbox
             this.CompetitionID = CompetitionID;
             this.GroupID = GroupID;
             PlayerName = Username;
-            TestOutput = string.Empty;
             GridOutput = new StackPanel();
-            ControlsVisible = Visibility.Visible;
-            ToggleButtonText = "V";
             HideOtherPlayers = false;
             HideZeroKC = false;
         }
@@ -50,8 +44,6 @@ namespace osrs_toolbox
         private void InitializeCommands()
         {
             Update = new RelayCommand(DoUpdate);
-            CloseApp = new RelayCommand(DoCloseApp);
-            ToggleVisibility = new RelayCommand(DoToggleControls);
         }
 
         private void InitializeTimer()
@@ -294,29 +286,6 @@ namespace osrs_toolbox
                 IsHitTestVisible = false
             });
             OnPropertyChanged(nameof(GridOutput));
-        }
-
-        private void DoCloseApp(object obj)
-        {
-            Application.Current.Shutdown();
-        }
-
-        private void DoToggleControls(object obj)
-        {
-            if (ControlsVisible == Visibility.Visible)
-            {
-                ControlsVisible = Visibility.Collapsed;
-                Application.Current.MainWindow.ResizeMode = ResizeMode.NoResize;
-                Application.Current.MainWindow.Topmost = true;
-                ToggleButtonText = ">";
-            }
-            else
-            {
-                ControlsVisible = Visibility.Visible;
-                Application.Current.MainWindow.ResizeMode = ResizeMode.CanResizeWithGrip;
-                Application.Current.MainWindow.Topmost = false;
-                ToggleButtonText = "V";
-            }
         }
     }
 }

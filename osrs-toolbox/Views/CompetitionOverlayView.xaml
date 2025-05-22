@@ -31,23 +31,9 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <local:OutlinedTextBlock Grid.Column="0" Text="Competition Tracker" Margin="3" FontWeight="ExtraBold" FontSize="16" Stroke="Black" Fill="White" StrokeThickness="1" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-            <Button Command="{Binding ToggleVisibility, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="3" Padding="3" Content="{Binding ToggleButtonText, UpdateSourceTrigger=PropertyChanged}"/>
-            <Button Command="{Binding CloseApp, UpdateSourceTrigger=PropertyChanged}" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="3" Padding="3" Content="X"/>
         </Grid>
-        <local:OutlinedTextBlock Text="Player:" Margin="3" Grid.Row="1" Grid.Column="0" FontWeight="ExtraBold" FontSize="16" Stroke="Black" Fill="White" StrokeThickness="1" VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="{Binding ControlsVisible, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Text="{Binding PlayerName, UpdateSourceTrigger=PropertyChanged}" Margin="3" Padding="3" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Visibility="{Binding ControlsVisible, UpdateSourceTrigger=PropertyChanged}"/>
-        <local:OutlinedTextBlock Text="Group:" Margin="3" Grid.Row="2" Grid.Column="0" FontWeight="ExtraBold" FontSize="16" Stroke="Black" Fill="White" StrokeThickness="1" VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="{Binding ControlsVisible, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Text="{Binding GroupID, UpdateSourceTrigger=PropertyChanged}" Margin="3" Padding="3" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Visibility="{Binding ControlsVisible, UpdateSourceTrigger=PropertyChanged}"/>
-        <local:OutlinedTextBlock Text="Competition:" Margin="3" Grid.Row="3" Grid.Column="0" FontWeight="ExtraBold" FontSize="16" Stroke="Black" Fill="White" StrokeThickness="1" VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="{Binding ControlsVisible, UpdateSourceTrigger=PropertyChanged}"/>
-        <TextBox Text="{Binding CompetitionID, UpdateSourceTrigger=PropertyChanged}" Margin="3" Padding="3" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Visibility="{Binding ControlsVisible, UpdateSourceTrigger=PropertyChanged}"/>
-        <!--TextBlock Text="Debug Output:" Margin="3" Padding="3" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Left"/-->
-        <local:OutlinedTextBlock Text="Hide Other Players:" Margin="3" Grid.Row="4" Grid.Column="0" FontWeight="ExtraBold" FontSize="16" Stroke="Black" Fill="White" StrokeThickness="1" VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="{Binding ControlsVisible, UpdateSourceTrigger=PropertyChanged}"/>
-        <CheckBox IsChecked="{Binding HideOtherPlayers, UpdateSourceTrigger=PropertyChanged}" Margin="3" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="{Binding ControlsVisible, UpdateSourceTrigger=PropertyChanged}"/>
-        <local:OutlinedTextBlock Text="Hide 0 KC:" Margin="3" Grid.Row="5" Grid.Column="0" FontWeight="ExtraBold" FontSize="16" Stroke="Black" Fill="White" StrokeThickness="1" VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="{Binding ControlsVisible, UpdateSourceTrigger=PropertyChanged}"/>
-        <CheckBox IsChecked="{Binding HideZeroKC, UpdateSourceTrigger=PropertyChanged}" Margin="3" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="{Binding ControlsVisible, UpdateSourceTrigger=PropertyChanged}"/>
         <Border Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" BorderThickness="0" Margin="3" Padding="3" CornerRadius="4">
             <ContentControl Content="{Binding GridOutput, UpdateSourceTrigger=PropertyChanged}"/>
         </Border>
-        <Button Content="Debug" Margin="3" Padding="3" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Command="{Binding Update, UpdateSourceTrigger=PropertyChanged}" Visibility="{Binding ControlsVisible, UpdateSourceTrigger=PropertyChanged}"/>
     </Grid>
 </Window>
