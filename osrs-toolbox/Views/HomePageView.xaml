@@ -10,32 +10,6 @@
         <local:HomePageViewModel/>
     </Window.DataContext>
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <TextBlock Text="Competition Overlay Testing" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" TextDecorations="Underline" Margin="3"/>
-        <TextBlock Text="Player Name:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
-        <!--TextBlock Text="Group ID:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/-->
-        <TextBlock Text="Competition ID:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
-        <TextBlock Text="Hide Other Players:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
-        <TextBlock Text="Hide Zero Gained:" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
-        <TextBox Text="{Binding PlayerName, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="3"/>
-        <!--TextBox Text="{Binding GroupID, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="3"/-->
-        <TextBox Text="{Binding CompetitionID, UpdateSourceTrigger=PropertyChanged}" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="3"/>
-        <CheckBox IsChecked="{Binding HideOtherPlayers, UpdateSourceTrigger=PropertyChanged}" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
-        <CheckBox IsChecked="{Binding HideZeroGained, UpdateSourceTrigger=PropertyChanged}" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
-        <Button Command="{Binding ToggleCompetitionOverlay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="3" Padding="3" Content="Toggle Competition Overlay"/>
-        <Button Command="{Binding ToggleCompetitionOverlayClickThrough, UpdateSourceTrigger=PropertyChanged}" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="3" Padding="3" Content="Make Overlay Click-Through"/>
+        <Button Command="{Binding OpenCompetitionOverlaySettings, UpdateSourceTrigger=PropertyChanged}" Content="Open Competition Overlay Settings" Margin="3" Padding="3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </Grid>
 </Window>
