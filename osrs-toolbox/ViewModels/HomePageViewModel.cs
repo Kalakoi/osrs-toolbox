@@ -35,6 +35,12 @@ namespace osrs_toolbox
             else
             {
                 CompetitionOverlayView cov = new CompetitionOverlayView();
+                (cov.DataContext as CompetitionOverlayViewModel).PlayerName = PlayerName;
+                (cov.DataContext as CompetitionOverlayViewModel).GroupID = GroupID;
+                (cov.DataContext as CompetitionOverlayViewModel).CompetitionID = CompetitionID;
+                (cov.DataContext as CompetitionOverlayViewModel).HideOtherPlayers = HideOtherPlayers;
+                (cov.DataContext as CompetitionOverlayViewModel).HideZeroKC = HideZeroKC;
+                cov.Show();
             }
         }
     }
