@@ -91,7 +91,9 @@ namespace osrs_toolbox
                 return;
             }
 
-            int KCSum = 0;
+            string KCorXP = "KC";
+            if (Enum.GetNames<Skills>().Contains(c.metric.ToLower())) KCorXP = "XP";
+            int GainedSum = 0;
             string TempOut = c.title;
             GridOutput.Children.Add(new OutlinedTextBlock()
             {
@@ -137,7 +139,7 @@ namespace osrs_toolbox
 
                 SubStack.Children.Add(new OutlinedTextBlock()
                 {
-                    Text = string.Format(" - {0} KC", cp.progress.gained.ToString()),
+                    Text = string.Format(" - {0} {1}", cp.progress.gained.ToString(), KCorXP),
                     Margin = new Thickness(3),
                     StrokeThickness = 1,
                     Stroke = Brushes.Black,
@@ -149,7 +151,7 @@ namespace osrs_toolbox
                     IsHitTestVisible = false
                 });
 
-                KCSum += cp.progress.gained;
+                GainedSum += cp.progress.gained;
 
                 bool AddToDisplay = true;
                 if (HideOtherPlayers && PlayerName.ToUpper() != cp.player.displayName.ToUpper())
@@ -162,7 +164,7 @@ namespace osrs_toolbox
             }
             GridOutput.Children.Add(new OutlinedTextBlock()
             {
-                Text = string.Format("Total KC: {0}", KCSum),
+                Text = string.Format("Total {1}: {0}", GainedSum, KCorXP),
                 Margin = new Thickness(3),
                 StrokeThickness = 1,
                 Stroke = Brushes.Black,
