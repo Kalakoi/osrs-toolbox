@@ -22,5 +22,65 @@ namespace osrs_toolbox.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LastUserName {
+            get {
+                return ((string)(this["LastUserName"]));
+            }
+            set {
+                this["LastUserName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("-1")]
+        public int LastGroupID {
+            get {
+                return ((int)(this["LastGroupID"]));
+            }
+            set {
+                this["LastGroupID"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("-1")]
+        public int LastCompetitionID {
+            get {
+                return ((int)(this["LastCompetitionID"]));
+            }
+            set {
+                this["LastCompetitionID"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool LastHideOthers {
+            get {
+                return ((bool)(this["LastHideOthers"]));
+            }
+            set {
+                this["LastHideOthers"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool LastHideZeroGained {
+            get {
+                return ((bool)(this["LastHideZeroGained"]));
+            }
+            set {
+                this["LastHideZeroGained"] = value;
+            }
+        }
     }
 }
