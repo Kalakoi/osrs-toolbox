@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:osrs_toolbox"
         mc:Ignorable="d"
-        Title="Competition Info" Height="800" Width="500" AllowsTransparency="True" Background="Transparent" WindowStyle="None" ResizeMode="NoResize" SizeToContent="WidthAndHeight" MouseDown="Window_MouseDown">
+        Title="Competition Info" Height="800" Width="500" AllowsTransparency="True" Background="Transparent" WindowStyle="None" ResizeMode="NoResize" SizeToContent="WidthAndHeight" MouseDown="Window_MouseDown" Topmost="True">
     <Window.DataContext>
         <local:CompetitionOverlayViewModel/>
     </Window.DataContext>
@@ -32,8 +32,8 @@
             </Grid.ColumnDefinitions>
             <local:OutlinedTextBlock Grid.Column="0" Text="Competition Tracker" Margin="3" FontWeight="ExtraBold" FontSize="16" Stroke="Black" Fill="White" StrokeThickness="1" VerticalAlignment="Center" HorizontalAlignment="Left"/>
         </Grid>
-        <Border Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" BorderThickness="0" Margin="3" Padding="3" CornerRadius="4">
-            <ContentControl Content="{Binding GridOutput, UpdateSourceTrigger=PropertyChanged}"/>
+        <Border Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" BorderThickness="0" Margin="3" Padding="3" CornerRadius="4" IsHitTestVisible="False">
+            <ContentControl Content="{Binding GridOutput, UpdateSourceTrigger=PropertyChanged}" IsHitTestVisible="False"/>
         </Border>
     </Grid>
 </Window>

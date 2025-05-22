@@ -27,6 +27,7 @@ namespace osrs_toolbox
         private void InitializeCommands()
         {
             ToggleCompetitionOverlay = new RelayCommand(DoToggleCompetitionOverlay);
+            ToggleCompetitionOverlayClickThrough = new RelayCommand(DoToggleCompetitionOverlayClickThrough);
         }
 
         private void DoToggleCompetitionOverlay(object obj)
@@ -52,6 +53,12 @@ namespace osrs_toolbox
                 Properties.Settings.Default.LastHideZeroGained = HideZeroGained;
                 Properties.Settings.Default.Save();
             }
+        }
+
+        private void DoToggleCompetitionOverlayClickThrough(object obj)
+        {
+            if (CompetitionOverlayView.Current == null) { return; }
+            (CompetitionOverlayView.Current as CompetitionOverlayView).MakeClickThrough();
         }
     }
 }

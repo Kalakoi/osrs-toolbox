@@ -18,6 +18,7 @@ namespace osrs_toolbox
         private bool _hideZeroKC = false;
 
         private ICommand _toggleCompetitionOverlay;
+        private ICommand _toggleCompetitionOverlayClickThrough;
 
         public int CompetitionID
         {
@@ -49,6 +50,11 @@ namespace osrs_toolbox
         {
             get { return _toggleCompetitionOverlay; }
             set { SetProperty(ref _toggleCompetitionOverlay, value, nameof(ToggleCompetitionOverlay)); }
+        }
+        public ICommand ToggleCompetitionOverlayClickThrough
+        {
+            get { return _toggleCompetitionOverlayClickThrough; }
+            set { SetProperty(ref _toggleCompetitionOverlayClickThrough, value, nameof(ToggleCompetitionOverlayClickThrough)); }
         }
     }
 }

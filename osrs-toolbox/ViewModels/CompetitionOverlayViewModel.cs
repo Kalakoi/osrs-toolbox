@@ -67,6 +67,7 @@ namespace osrs_toolbox
         private void DoUpdate(object obj)
         {
             GridOutput = new StackPanel();
+            GridOutput.IsHitTestVisible = false;
             Competition c = new Competition();
             try
             {
@@ -85,7 +86,8 @@ namespace osrs_toolbox
                     VerticalAlignment = VerticalAlignment.Center,
                     HorizontalAlignment = HorizontalAlignment.Left,
                     FontWeight = FontWeights.ExtraBold,
-                    TextWrapping = TextWrapping.Wrap
+                    TextWrapping = TextWrapping.Wrap,
+                    IsHitTestVisible = false
                 });
                 OnPropertyChanged(nameof(GridOutput));
                 return;
@@ -106,13 +108,15 @@ namespace osrs_toolbox
                 VerticalAlignment = VerticalAlignment.Center,
                 HorizontalAlignment = HorizontalAlignment.Left,
                 FontWeight = FontWeights.ExtraBold,
-                TextWrapping = TextWrapping.Wrap
+                TextWrapping = TextWrapping.Wrap,
+                IsHitTestVisible = false
             });
             foreach (CompetitionParticipation cp in c.participations)
             {
                 StackPanel SubStack = new StackPanel()
                 {
-                    Orientation = Orientation.Horizontal
+                    Orientation = Orientation.Horizontal,
+                    IsHitTestVisible = false
                 };
 
                 Image typeImage = new Image();
