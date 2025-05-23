@@ -13,6 +13,7 @@ namespace osrs_toolbox
     {
         private ICommand _openCompetitionOverlaySettings;
         private ICommand _openDropChanceCalculator;
+        private ICommand _openCombatLevelCalculator;
 
         public ICommand OpenCompetitionOverlaySettings
         {
@@ -24,6 +25,12 @@ namespace osrs_toolbox
         {
             get { return _openDropChanceCalculator; }
             set { SetProperty(ref _openDropChanceCalculator, value, nameof(OpenDropChanceCalculator)); }
+        }
+
+        public ICommand OpenCombatLevelCalculator
+        {
+            get { return _openCombatLevelCalculator; }
+            set { SetProperty(ref _openCombatLevelCalculator, value, nameof(OpenCombatLevelCalculator)); }
         }
     }
 }

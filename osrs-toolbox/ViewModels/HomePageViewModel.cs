@@ -24,6 +24,7 @@ namespace osrs_toolbox
         {
             OpenCompetitionOverlaySettings = new RelayCommand(DoOpenCompetitionOverlaySettings);
             OpenDropChanceCalculator = new RelayCommand(DoOpenDropChanceCalculator);
+            OpenCombatLevelCalculator = new RelayCommand(DoOpenCombatLevelCalculator);
         }
 
         private void DoOpenCompetitionOverlaySettings(object obj)
@@ -51,6 +52,20 @@ namespace osrs_toolbox
             {
                 DropChanceView dcv = new DropChanceView();
                 dcv.Show();
+            }
+        }
+
+        private void DoOpenCombatLevelCalculator(object obj)
+        {
+            if (CombatLevelView.Current != null)
+            {
+                CombatLevelView.Current.Close();
+                CombatLevelView.Current = null;
+            }
+            else
+            {
+                CombatLevelView clv = new CombatLevelView();
+                clv.Show();
             }
         }
     }
