@@ -12,13 +12,7 @@ namespace osrs_toolbox
         private double _dropRate;
         private int _currentKC;
 
-        private double _chanceAtCurrent;
-        private int _kcForFifty;
-        private int _kcForNinety;
-
         private double _chanceCheck;
-
-        private int _kcForChanceCheck;
 
         public double DropRate
         {
