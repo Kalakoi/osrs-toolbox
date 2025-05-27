@@ -39,5 +39,10 @@ namespace osrs_toolbox
             var hwnd = new WindowInteropHelper(this).Handle;
             WindowsServices.SetWindowExTransparent(hwnd);
         }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            Current = null;
+        }
     }
 }

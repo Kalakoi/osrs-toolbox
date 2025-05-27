@@ -25,5 +25,10 @@ namespace osrs_toolbox
             InitializeComponent();
             Current = this;
         }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            Current = null;
+        }
     }
 }

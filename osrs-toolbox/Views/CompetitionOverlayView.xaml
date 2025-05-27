@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:osrs_toolbox"
         mc:Ignorable="d"
-        Title="Competition Info" Height="800" Width="500" AllowsTransparency="True" Background="Transparent" WindowStyle="None" ResizeMode="NoResize" SizeToContent="WidthAndHeight" MouseDown="Window_MouseDown" Topmost="True">
+        Title="Competition Info" Height="800" Width="500" AllowsTransparency="True" Background="Transparent" WindowStyle="None" ResizeMode="NoResize" SizeToContent="WidthAndHeight" MouseDown="Window_MouseDown" Topmost="True" Closed="Window_Closed">
     <Window.DataContext>
         <local:CompetitionOverlayViewModel/>
     </Window.DataContext>

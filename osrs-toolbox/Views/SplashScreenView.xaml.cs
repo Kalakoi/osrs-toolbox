@@ -55,6 +55,7 @@ namespace osrs_toolbox
             Application.Current.MainWindow = HomePageView.Current;
             HomePageView.Current.Show();
             this.Close();
+            Current = null;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
