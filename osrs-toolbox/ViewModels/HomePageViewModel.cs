@@ -25,6 +25,7 @@ namespace osrs_toolbox
             OpenCompetitionOverlaySettings = new RelayCommand(DoOpenCompetitionOverlaySettings);
             OpenDropChanceCalculator = new RelayCommand(DoOpenDropChanceCalculator);
             OpenCombatLevelCalculator = new RelayCommand(DoOpenCombatLevelCalculator);
+            OpenShopBuyoutCalculator = new RelayCommand(DoOpenShopBuyoutCalculator);
         }
 
         private void DoOpenCompetitionOverlaySettings(object obj)
@@ -66,6 +67,20 @@ namespace osrs_toolbox
             {
                 CombatLevelView clv = new CombatLevelView();
                 clv.Show();
+            }
+        }
+
+        private void DoOpenShopBuyoutCalculator(object obj)
+        {
+            if (ShopBuyoutView.Current != null)
+            {
+                ShopBuyoutView.Current.Close();
+                ShopBuyoutView.Current = null;
+            }
+            else
+            {
+                ShopBuyoutView sbv = new ShopBuyoutView();
+                sbv.Show();
             }
         }
     }
