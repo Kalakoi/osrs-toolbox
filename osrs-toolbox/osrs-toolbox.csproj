@@ -19,6 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="CXuesong.MW.WikiClientLibrary" Version="0.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Resources\SplashScreenLogo.png" />
   </ItemGroup>
 
