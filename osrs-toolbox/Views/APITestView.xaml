@@ -1,0 +1,22 @@
+﻿<Window x:Class="osrs_toolbox.APITestView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:osrs_toolbox"
+        mc:Ignorable="d"
+        Title="API Testing" Height="450" Width="800" Closed="Window_Closed">
+    <Window.DataContext>
+        <local:APITestViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Button Command="{Binding TestCall, UpdateSourceTrigger=PropertyChanged}" Content="Run API Test" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="3" Padding="3"/>
+        <Border Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" BorderThickness="2" CornerRadius="4" Margin="3" Padding="3">
+            <TextBlock Text="{Binding TestOutput, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="3"/>
+        </Border>
+    </Grid>
+</Window>

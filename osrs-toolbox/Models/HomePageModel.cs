@@ -15,6 +15,7 @@ namespace osrs_toolbox
         private ICommand _openDropChanceCalculator;
         private ICommand _openCombatLevelCalculator;
         private ICommand _openShopBuyoutCalculator;
+        private ICommand _openAPITest;
 
         public ICommand OpenCompetitionOverlaySettings
         {
@@ -37,6 +38,11 @@ namespace osrs_toolbox
         {
             get { return _openShopBuyoutCalculator; }
             set { SetProperty(ref _openShopBuyoutCalculator, value, nameof(OpenShopBuyoutCalculator)); }
+        }
+        public ICommand OpenAPITest
+        {
+            get { return _openAPITest; }
+            set { SetProperty(ref _openAPITest, value, nameof(OpenAPITest)); }
         }
     }
 }
