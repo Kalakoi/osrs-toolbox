@@ -14,9 +14,9 @@ namespace osrs_toolbox
             TestCall = new RelayCommand(DoTest);
         }
 
-        private void DoTest(object obj)
+        private async void DoTest(object obj)
         {
-
+            TestOutput = await Wiki.TestAsync();
         }
     }
 }
