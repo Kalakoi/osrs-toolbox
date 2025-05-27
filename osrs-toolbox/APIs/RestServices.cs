@@ -23,7 +23,7 @@ namespace osrs_toolbox
             using (HttpClient client = new HttpClient())
             {
                 //Add request headers
-                client.DefaultRequestHeaders.Add("user-agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome / 58.0.3029.110 Safari / 537.36");
+                client.DefaultRequestHeaders.Add("user-agent", "osrs-toolbox");
                 client.DefaultRequestHeaders.Add("X-Authorization", APIKey);
                 //Send request and await response
                 string response = await client.GetStringAsync(uri).ConfigureAwait(false);
@@ -42,7 +42,7 @@ namespace osrs_toolbox
             using (HttpClient client = new HttpClient())
             {
                 //Add request headers
-                client.DefaultRequestHeaders.Add("user-agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome / 58.0.3029.110 Safari / 537.36");
+                client.DefaultRequestHeaders.Add("user-agent", "osrs-toolbox");
                 //Send request and await response
                 string response = await client.GetStringAsync(uri).ConfigureAwait(false);
                 return response;
@@ -111,7 +111,7 @@ namespace osrs_toolbox
             {
                 //Add headers for request
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                client.DefaultRequestHeaders.Add("user-agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome / 58.0.3029.110 Safari / 537.36");
+                client.DefaultRequestHeaders.Add("user-agent", "osrs-toolbox");
                 client.DefaultRequestHeaders.Add("X-Authorization", APIKey);
                 client.DefaultRequestHeaders.Host = uri.Host;
                 //Create content to send from JSON string
