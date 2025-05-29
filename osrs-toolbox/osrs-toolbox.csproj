@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Panel\panel_top_left.png" />
     <None Remove="Resources\SplashScreenLogo.png" />
   </ItemGroup>
 
@@ -23,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\Panel\panel_top_left.png" />
     <Resource Include="Resources\SplashScreenLogo.png" />
   </ItemGroup>
 
