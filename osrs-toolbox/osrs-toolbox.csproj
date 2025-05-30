@@ -23,6 +23,7 @@
     <None Remove="Resources\Panel\panel-top-right.png" />
     <None Remove="Resources\Panel\panel-top.png" />
     <None Remove="Resources\SplashScreenLogo.png" />
+    <None Remove="Resources\stone-input-box.png" />
     <None Remove="Resources\wood-button-pressed.png" />
     <None Remove="Resources\wood-button.png" />
   </ItemGroup>
@@ -48,6 +49,7 @@
     <Resource Include="Resources\Panel\panel-top-right.png" />
     <Resource Include="Resources\Panel\panel-top.png" />
     <Resource Include="Resources\SplashScreenLogo.png" />
+    <Resource Include="Resources\stone-input-box.png" />
     <Resource Include="Resources\wood-button-pressed.png" />
     <Resource Include="Resources\wood-button.png" />
   </ItemGroup>
