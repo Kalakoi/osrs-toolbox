@@ -71,7 +71,6 @@
             </Grid.ColumnDefinitions>
             <local:OutlinedTextBlock Text="Competition Overlay Settings" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Stroke="Black" Fill="Yellow" StrokeThickness="1.2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" Margin="3,-45,3,0" IsHitTestVisible="False"/>
             <local:OutlinedTextBlock Text="Player Name:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3" Stroke="Black" Fill="Yellow" StrokeThickness="0.5" FontSize="20"/>
-            <!--TextBlock Text="Group ID:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/-->
             <local:OutlinedTextBlock Text="Competition ID:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3" Stroke="Black" Fill="Yellow" StrokeThickness="0.5" FontSize="20"/>
             <local:OutlinedTextBlock Text="Hide Other Players:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3" Stroke="Black" Fill="Yellow" StrokeThickness="0.5" FontSize="20"/>
             <local:OutlinedTextBlock Text="Hide Zero Gained:" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3" Stroke="Black" Fill="Yellow" StrokeThickness="0.5" FontSize="20"/>
@@ -93,8 +92,6 @@
             <Border Grid.Row="5" Grid.Column="1" Width="30" Height="30" Margin="3" HorizontalAlignment="Left">
                 <Image Source="{Binding HideZeroCheckboxImage, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" StretchDirection="Both" Stretch="Fill" MouseDown="Toggle_Zero_Gained"/>
             </Border>
-            <!--CheckBox IsChecked="{Binding HideOtherPlayers, UpdateSourceTrigger=PropertyChanged}" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3" Foreground="Transparent" Background="Transparent" BorderBrush="Transparent" BorderThickness="0"/>
-            <CheckBox IsChecked="{Binding HideZeroGained, UpdateSourceTrigger=PropertyChanged}" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/-->
             <Button Command="{Binding ToggleCompetitionOverlay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Template="{StaticResource NoMouseOverButtonTemplate}" Width="450" Height="60" Margin="3" Padding="3" VerticalAlignment="Center" HorizontalAlignment="Center" Background="Transparent" BorderBrush="Transparent" BorderThickness="0">
                 <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <Grid.ColumnDefinitions>
