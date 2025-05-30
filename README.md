@@ -4,19 +4,21 @@ It is currently in development and not in a working state.
 
 Planned features:
 
--Wise Old Man integration
+-Wise Old Man integration (Working for competition tracking, more to come)
 
--Wise Old Man competition information overlay
+-Wise Old Man competition information overlay (Functionally working)
 
--Player skills lookup
+-Player skills lookup (working in the combat level calculator, more to come)
+
+-Combat level calculator (functionally working with required skills to increase combat level)
 
 -Skill calculators
 
 -DPS calculators
 
--Drop chance calculator
+-Drop chance calculator (Functionally working, needs tweaking for ease of use)
 
--Shop buyout cost calculator
+-Shop buyout cost calculator (Functionally working, needs tweaking for ease of use)
 
 -Best-in-slot gear calculator
 
