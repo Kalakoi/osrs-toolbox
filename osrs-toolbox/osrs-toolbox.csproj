@@ -11,8 +11,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\Panel\panel_top_left.png" />
+    <None Remove="Resources\close-button.png" />
+    <None Remove="Resources\main-banner.png" />
+    <None Remove="Resources\Panel\panel-background.png" />
+    <None Remove="Resources\Panel\panel-bottom-left.png" />
+    <None Remove="Resources\Panel\panel-bottom-right.png" />
+    <None Remove="Resources\Panel\panel-bottom.png" />
+    <None Remove="Resources\Panel\panel-left.png" />
+    <None Remove="Resources\Panel\panel-right.png" />
+    <None Remove="Resources\Panel\panel-top-left.png" />
+    <None Remove="Resources\Panel\panel-top-right.png" />
+    <None Remove="Resources\Panel\panel-top.png" />
     <None Remove="Resources\SplashScreenLogo.png" />
+    <None Remove="Resources\wood-button-pressed.png" />
+    <None Remove="Resources\wood-button.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,8 +36,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\Panel\panel_top_left.png" />
+    <Resource Include="Resources\close-button.png" />
+    <Resource Include="Resources\main-banner.png" />
+    <Resource Include="Resources\Panel\panel-background.png" />
+    <Resource Include="Resources\Panel\panel-bottom-left.png" />
+    <Resource Include="Resources\Panel\panel-bottom-right.png" />
+    <Resource Include="Resources\Panel\panel-bottom.png" />
+    <Resource Include="Resources\Panel\panel-left.png" />
+    <Resource Include="Resources\Panel\panel-right.png" />
+    <Resource Include="Resources\Panel\panel-top-left.png" />
+    <Resource Include="Resources\Panel\panel-top-right.png" />
+    <Resource Include="Resources\Panel\panel-top.png" />
     <Resource Include="Resources\SplashScreenLogo.png" />
+    <Resource Include="Resources\wood-button-pressed.png" />
+    <Resource Include="Resources\wood-button.png" />
   </ItemGroup>
 
   <ItemGroup>

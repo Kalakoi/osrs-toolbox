@@ -33,5 +33,35 @@ namespace osrs_toolbox
                 w.Close();
             Application.Current.Shutdown();
         }
+
+        private void Move_Window(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed) { this.DragMove(); }
+        }
+
+        private void Close_App(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed) { Window_Closed(sender, e); }
+        }
+
+        private void Button_Hovered(object sender, MouseEventArgs e)
+        {
+            (sender as Image).Source = new BitmapImage(new Uri(@"/Resources/wood-button-pressed.png", UriKind.Relative));
+        }
+
+        private void Button_Unhovered(object sender, MouseEventArgs e)
+        {
+            (sender as Image).Source = new BitmapImage(new Uri(@"/Resources/wood-button.png", UriKind.Relative));
+        }
+
+        private void Exit_Hovered(object sender, MouseEventArgs e)
+        {
+            (sender as Rectangle).Fill = new SolidColorBrush(Colors.Red);
+        }
+
+        private void Exit_Unhovered(object sender, MouseEventArgs e)
+        {
+            (sender as Rectangle).Fill = new SolidColorBrush(Colors.White);
+        }
     }
 }
