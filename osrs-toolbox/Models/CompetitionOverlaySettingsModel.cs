@@ -1,4 +1,6 @@
 ﻿using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace osrs_toolbox
 {
@@ -31,13 +33,15 @@ namespace osrs_toolbox
         public bool HideOtherPlayers
         {
             get { return _hideOtherPlayers; }
-            set { SetProperty(ref _hideOtherPlayers, value, nameof(HideOtherPlayers)); }
+            set { SetProperty(ref _hideOtherPlayers, value, nameof(HideOtherPlayers)); OnPropertyChanged(nameof(OtherPlayersCheckboxImage)); }
         }
         public bool HideZeroGained
         {
             get { return _hideZeroKC; }
-            set { SetProperty(ref _hideZeroKC, value, nameof(HideZeroGained)); }
+            set { SetProperty(ref _hideZeroKC, value, nameof(HideZeroGained)); OnPropertyChanged(nameof(HideZeroCheckboxImage)); }
         }
+        public ImageSource OtherPlayersCheckboxImage => HideOtherPlayers ? new BitmapImage(new Uri(@"/Resources/stone-checkbox-checked.png", UriKind.Relative)) : new BitmapImage(new Uri(@"/Resources/stone-checkbox-unchecked.png", UriKind.Relative));
+        public ImageSource HideZeroCheckboxImage => HideZeroGained ? new BitmapImage(new Uri(@"/Resources/stone-checkbox-checked.png", UriKind.Relative)) : new BitmapImage(new Uri(@"/Resources/stone-checkbox-unchecked.png", UriKind.Relative));
 
         public ICommand ToggleCompetitionOverlay
         {
