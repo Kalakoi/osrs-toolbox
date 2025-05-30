@@ -30,7 +30,12 @@
         <TextBlock Text="Competition ID:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
         <TextBlock Text="Hide Other Players:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
         <TextBlock Text="Hide Zero Gained:" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
-        <TextBox Text="{Binding PlayerName, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="3"/>
+        <Border Grid.Row="1" Grid.Column="1" Height="50" Width="180" HorizontalAlignment="Left">
+            <Grid>
+                <Image Source="/Resources/stone-input-box.png" Stretch="Fill" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                <TextBox Text="{Binding PlayerName, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="16" Background="Transparent" BorderBrush="Transparent" Foreground="Yellow" FontSize="16"/>
+            </Grid>
+        </Border>
         <!--TextBox Text="{Binding GroupID, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="3"/-->
         <TextBox Text="{Binding CompetitionID, UpdateSourceTrigger=PropertyChanged}" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="3"/>
         <CheckBox IsChecked="{Binding HideOtherPlayers, UpdateSourceTrigger=PropertyChanged}" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3"/>
