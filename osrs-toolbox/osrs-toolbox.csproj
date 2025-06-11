@@ -85,8 +85,4 @@
     </None>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="APIs\Random\" />
-  </ItemGroup>
-
 </Project>

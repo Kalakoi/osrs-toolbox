@@ -16,7 +16,13 @@ namespace osrs_toolbox
 
         private async void DoTest(object obj)
         {
-            TestOutput = await Wiki.TestAsync();
+            int[] test = await Random.GetRandomIntegersAsync(0, 36, 8, false);
+            string TestString = string.Empty;
+            foreach(int i in test)
+            {
+                TestString += string.Format("{0}\n", i);
+            }
+            TestOutput = TestString;
         }
     }
 }
