@@ -10,22 +10,14 @@
         <local:CompetitionOverlaySettingsViewModel/>
     </Window.DataContext>
     <Window.Resources>
-        <ControlTemplate x:Key="NoMouseOverButtonTemplate"   
-             TargetType="Button">
-            <Border Background="{TemplateBinding Background}"  
-      BorderBrush="{TemplateBinding BorderBrush}"  
-      BorderThickness="{TemplateBinding BorderThickness}">
-                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"  
-                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+        <ControlTemplate x:Key="NoMouseOverButtonTemplate" TargetType="Button">
+            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
             </Border>
-
             <ControlTemplate.Triggers>
-                <Trigger Property="IsEnabled"  
-         Value="False">
-                    <Setter Property="Background"  
-          Value="{x:Static SystemColors.ControlLightBrush}" />
-                    <Setter Property="Foreground"  
-          Value="{x:Static SystemColors.GrayTextBrush}" />
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="{x:Static SystemColors.ControlLightBrush}"/>
+                    <Setter Property="Foreground" Value="{x:Static SystemColors.GrayTextBrush}"/>
                 </Trigger>
             </ControlTemplate.Triggers>
         </ControlTemplate>
