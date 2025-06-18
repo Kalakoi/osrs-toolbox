@@ -26,18 +26,10 @@ namespace osrs_toolbox
                     replacement = AllowDuplicates
                 }
             };
-            string TestString = string.Empty;
-            TestString += string.Format("{0}: {1}\n", nameof(Request.jsonrpc), Request.jsonrpc);
-            TestString += string.Format("{0}: {1}\n", nameof(Request.method), Request.method);
             string RequestJson = Request.GetJson();
-            TestString += string.Format("{0}\n", RequestJson);
             string ResponseJson = await RestServices.GetPostResponseAsync(new Uri(BaseEndpoint), RequestJson, APIKey).ConfigureAwait(false);
-            TestString += string.Format("{0}", ResponseJson);
-            MessageBox.Show(TestString);
             RandomIntegerRequestResponse response = JsonSerializer.Deserialize<RandomIntegerRequestResponse>(ResponseJson);
             return response.result.random.data;
-            //return TestString;
-            //return ResponseJson;
         }
     }
 }

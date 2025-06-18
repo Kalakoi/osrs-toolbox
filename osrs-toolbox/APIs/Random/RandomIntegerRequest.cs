@@ -11,7 +11,9 @@ namespace osrs_toolbox
 {
     public class RandomIntegerRequest
     {
+        [JsonPropertyName("jsonrpc")]
         public string jsonrpc { get; set; } = "2.0";
+        [JsonPropertyName("method")]
         public string method { get; set; } = "generateIntegers";
         [JsonPropertyName("params")]
         public RandomIntegerRequestParameters parameters { get; set; } = new();
@@ -34,23 +36,23 @@ namespace osrs_toolbox
 
     public class RandomIntegerRequestResponse
     {
-        public string jsonrpc;
-        public RandomIntegerResult result;
-        public int id;
+        public string jsonrpc { get; set; }
+        public RandomIntegerResult result { get; set; }
+        public long id { get; set; }
     }
 
     public class RandomIntegerResult
     {
-        public RandomIntegerData random;
-        public int bitsUsed;
-        public int bitsLeft;
-        public int requestsLeft;
-        public int advisoryDelay;
+        public RandomIntegerData random { get; set; }
+        public int bitsUsed { get; set; }
+        public int bitsLeft { get; set; }
+        public int requestsLeft { get; set; }
+        public int advisoryDelay { get; set; }
     }
 
     public class RandomIntegerData
     {
-        public int[] data;
-        public DateTime completionTime;
+        public int[] data { get; set; }
+        public string completionTime { get; set; }
     }
 }
