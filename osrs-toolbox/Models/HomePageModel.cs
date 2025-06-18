@@ -16,6 +16,7 @@ namespace osrs_toolbox
         private ICommand _openCombatLevelCalculator;
         private ICommand _openShopBuyoutCalculator;
         private ICommand _openAPITest;
+        private ICommand _openDiceRoller;
 
         public ICommand OpenCompetitionOverlaySettings
         {
@@ -44,5 +45,10 @@ namespace osrs_toolbox
             get { return _openAPITest; }
             set { SetProperty(ref _openAPITest, value, nameof(OpenAPITest)); }
         }
+        public ICommand OpenDiceRoller
+        {
+            get { return _openDiceRoller; }
+            set { SetProperty(ref _openDiceRoller, value, nameof(OpenDiceRoller)); }
+        }    
     }
 }

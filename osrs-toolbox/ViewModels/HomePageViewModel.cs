@@ -27,6 +27,7 @@ namespace osrs_toolbox
             OpenCombatLevelCalculator = new RelayCommand(DoOpenCombatLevelCalculator);
             OpenShopBuyoutCalculator = new RelayCommand(DoOpenShopBuyoutCalculator);
             OpenAPITest = new RelayCommand(DoOpenAPITest);
+            OpenDiceRoller = new RelayCommand(DoOpenDiceRoller);
         }
 
         private void DoOpenCompetitionOverlaySettings(object obj)
@@ -96,6 +97,20 @@ namespace osrs_toolbox
             {
                 APITestView atv = new APITestView();
                 atv.Show();
+            }
+        }
+
+        private void DoOpenDiceRoller(object obj)
+        {
+            if (DiceRollerView.Current != null)
+            {
+                DiceRollerView.Current.Close();
+                DiceRollerView.Current = null;
+            }
+            else
+            {
+                DiceRollerView drv = new DiceRollerView();
+                drv.Show();
             }
         }
     }

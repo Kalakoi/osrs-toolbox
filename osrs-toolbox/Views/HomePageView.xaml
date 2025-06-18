@@ -104,7 +104,7 @@
                         <local:OutlinedTextBlock Text="Open Shop Buyout Calculator" VerticalAlignment="Center" HorizontalAlignment="Center" Stroke="Black" Fill="Yellow" FontSize="30" StrokeThickness="1.2" IsHitTestVisible="False" TextWrapping="Wrap" TextAlignment="Center"/>
                     </Grid>
                 </Button>
-                <Button Command="{Binding OpenAPITest, UpdateSourceTrigger=PropertyChanged}" Template="{StaticResource NoMouseOverButtonTemplate}" Width="350" Height="90" Margin="3" Padding="3" VerticalAlignment="Center" HorizontalAlignment="Center" Background="Transparent" BorderBrush="Transparent" BorderThickness="0">
+                <Button Command="{Binding OpenDiceRoller, UpdateSourceTrigger=PropertyChanged}" Template="{StaticResource NoMouseOverButtonTemplate}" Width="350" Height="90" Margin="3" Padding="3" VerticalAlignment="Center" HorizontalAlignment="Center" Background="Transparent" BorderBrush="Transparent" BorderThickness="0">
                     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
@@ -113,7 +113,7 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <Image Source="/Resources/wood-button.png" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" StretchDirection="Both" Stretch="Fill" MouseEnter="Button_Hovered" MouseLeave="Button_Unhovered"/>
-                        <local:OutlinedTextBlock Text="Open API Test" VerticalAlignment="Center" HorizontalAlignment="Center" Stroke="Black" Fill="Yellow" FontSize="30" StrokeThickness="1.2" IsHitTestVisible="False" TextWrapping="Wrap" TextAlignment="Center"/>
+                        <local:OutlinedTextBlock Text="Open Dice Roller" VerticalAlignment="Center" HorizontalAlignment="Center" Stroke="Black" Fill="Yellow" FontSize="30" StrokeThickness="1.2" IsHitTestVisible="False" TextWrapping="Wrap" TextAlignment="Center"/>
                     </Grid>
                 </Button>
             </StackPanel>
