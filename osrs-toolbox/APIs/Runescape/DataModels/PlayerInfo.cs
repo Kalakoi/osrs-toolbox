@@ -61,10 +61,14 @@ namespace osrs_toolbox
         public Activity PvPArena { get; set; } = InitialActivityState;
         public Activity SoulWarsZeal { get; set; } = InitialActivityState;
         public Activity RiftsClosed { get; set; } = InitialActivityState;
+        public Activity ColosseumGlory { get; set; } = InitialActivityState;
+        public Activity CollectionsLogged { get; set; } = InitialActivityState;
 
         //bosses
         public Boss AbyssalSire { get; set; } = InitialBossState;
         public Boss AlchemicalHydra { get; set; } = InitialBossState;
+        public Boss Amoxliatl { get; set; } = InitialBossState;
+        public Boss Araxxor { get; set; } = InitialBossState;
         public Boss Artio { get; set; } = InitialBossState;
         public Boss BarrowsChests { get; set; } = InitialBossState;
         public Boss Bryophyta { get; set; } = InitialBossState;
@@ -90,8 +94,9 @@ namespace osrs_toolbox
         public Boss KalphiteQueen { get; set; } = InitialBossState;
         public Boss KingBlackDragon { get; set; } = InitialBossState;
         public Boss Kraken { get; set; } = InitialBossState;
-        public Boss Kree { get; set; } = InitialBossState;
-        public Boss Kril { get; set; } = InitialBossState;
+        public Boss Kreearra { get; set; } = InitialBossState;
+        public Boss KrilTsutsaroth { get; set; } = InitialBossState;
+        public Boss MoonsofPeril { get; set; } = InitialBossState;
         public Boss Mimic { get; set; } = InitialBossState;
         public Boss Nex { get; set; } = InitialBossState;
         public Boss Nightmare { get; set; } = InitialBossState;
@@ -100,12 +105,16 @@ namespace osrs_toolbox
         public Boss PhantomMuspah { get; set; } = InitialBossState;
         public Boss Sarachnis { get; set; } = InitialBossState;
         public Boss Scorpia { get; set; } = InitialBossState;
+        public Boss Scurrius { get; set; } = InitialBossState;
         public Boss Skotizo { get; set; } = InitialBossState;
+        public Boss SolHeredit { get; set; } = InitialBossState;
         public Boss Spindel { get; set; } = InitialBossState;
         public Boss Tempoross { get; set; } = InitialBossState;
         public Boss Gauntlet { get; set; } = InitialBossState;
         public Boss CorruptedGauntlet { get; set; } = InitialBossState;
+        public Boss Hueycoatl { get; set; } = InitialBossState;
         public Boss Leviathan { get; set; } = InitialBossState;
+        public Boss RoyalTitans { get; set; } = InitialBossState;
         public Boss Whisperer { get; set; } = InitialBossState;
         public Boss TheatreofBlood { get; set; } = InitialBossState;
         public Boss TheatreofBloodHardMode { get; set; } = InitialBossState;
