@@ -11,6 +11,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="APIs\APIKeys.template.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Resources\close-button.png" />
     <None Remove="Resources\main-banner.png" />
     <None Remove="Resources\Panel\panel-background.png" />
@@ -32,6 +36,10 @@
 
   <ItemGroup>
     <Content Include="fantasy_toolbox_icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="APIs\APIKeys.template.cs" />
   </ItemGroup>
 
   <ItemGroup>
