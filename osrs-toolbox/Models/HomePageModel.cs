@@ -17,6 +17,7 @@ namespace osrs_toolbox
         private ICommand _openShopBuyoutCalculator;
         private ICommand _openAPITest;
         private ICommand _openDiceRoller;
+        private ICommand _openHiscoreLookup;
 
         public ICommand OpenCompetitionOverlaySettings
         {
@@ -50,5 +51,10 @@ namespace osrs_toolbox
             get { return _openDiceRoller; }
             set { SetProperty(ref _openDiceRoller, value, nameof(OpenDiceRoller)); }
         }    
+        public ICommand OpenHiscoreLookup
+        {
+            get { return _openHiscoreLookup; }
+            set { SetProperty(ref _openHiscoreLookup, value, nameof(OpenHiscoreLookup)); }
+        }
     }
 }

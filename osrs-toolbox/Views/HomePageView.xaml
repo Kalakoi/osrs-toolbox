@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:osrs_toolbox"
         mc:Ignorable="d"
-        Title="OSRS Toolbox" Height="670" Width="500" Closed="Window_Closed" WindowStyle="None" Background="Transparent" AllowsTransparency="True">
+        Title="OSRS Toolbox" Height="770" Width="500" Closed="Window_Closed" WindowStyle="None" Background="Transparent" AllowsTransparency="True">
     <Window.DataContext>
         <local:HomePageViewModel/>
     </Window.DataContext>
@@ -42,7 +42,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
-        <Image Source="/Resources/Panel/panel-background.png" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Margin="-3"/>
+        <Image Source="/Resources/Panel/panel-background.png" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Margin="-7"/>
         <Image Source="/Resources/Panel/panel-left.png" Grid.Row="2" Grid.Column="0" Margin="0,-8,0,-8" Width="40" StretchDirection="Both" HorizontalAlignment="Stretch" VerticalAlignment="Top" Stretch="Fill"/>
         <Image Source="/Resources/Panel/panel-bottom.png" Grid.Row="3" Margin="-8,0,-8,0" Grid.Column="1" Height="40" StretchDirection="Both" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Fill"/>
         <Image Source="/Resources/Panel/panel-right.png" Grid.Row="2" Grid.Column="2" Margin="0,-8,0,-8" Width="40" StretchDirection="Both" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Fill"/>
@@ -114,6 +114,18 @@
                         </Grid.RowDefinitions>
                         <Image Source="/Resources/wood-button.png" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" StretchDirection="Both" Stretch="Fill" MouseEnter="Button_Hovered" MouseLeave="Button_Unhovered"/>
                         <local:OutlinedTextBlock Text="Open Dice Roller" VerticalAlignment="Center" HorizontalAlignment="Center" Stroke="Black" Fill="Yellow" FontSize="30" StrokeThickness="1.2" IsHitTestVisible="False" TextWrapping="Wrap" TextAlignment="Center"/>
+                    </Grid>
+                </Button>
+                <Button Command="{Binding OpenHiscoreLookup, UpdateSourceTrigger=PropertyChanged}" Template="{StaticResource NoMouseOverButtonTemplate}" Width="350" Height="90" Margin="3" Padding="3" VerticalAlignment="Center" HorizontalAlignment="Center" Background="Transparent" BorderBrush="Transparent" BorderThickness="0">
+                    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="/Resources/wood-button.png" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" StretchDirection="Both" Stretch="Fill" MouseEnter="Button_Hovered" MouseLeave="Button_Unhovered"/>
+                        <local:OutlinedTextBlock Text="Open Hiscore Lookup" VerticalAlignment="Center" HorizontalAlignment="Center" Stroke="Black" Fill="Yellow" FontSize="30" StrokeThickness="1.2" IsHitTestVisible="False" TextWrapping="Wrap" TextAlignment="Center"/>
                     </Grid>
                 </Button>
             </StackPanel>

@@ -28,6 +28,7 @@ namespace osrs_toolbox
             OpenShopBuyoutCalculator = new RelayCommand(DoOpenShopBuyoutCalculator);
             OpenAPITest = new RelayCommand(DoOpenAPITest);
             OpenDiceRoller = new RelayCommand(DoOpenDiceRoller);
+            OpenHiscoreLookup = new RelayCommand(DoOpenHiscoreLookup);
         }
 
         private void DoOpenCompetitionOverlaySettings(object obj)
@@ -111,6 +112,20 @@ namespace osrs_toolbox
             {
                 DiceRollerView drv = new DiceRollerView();
                 drv.Show();
+            }
+        }
+
+        private void DoOpenHiscoreLookup(object obj)
+        {
+            if (HiscoreLookupView.Current != null)
+            {
+                HiscoreLookupView.Current.Close();
+                HiscoreLookupView.Current = null;
+            }
+            else
+            {
+                HiscoreLookupView hlv = new HiscoreLookupView();
+                hlv.Show();
             }
         }
     }

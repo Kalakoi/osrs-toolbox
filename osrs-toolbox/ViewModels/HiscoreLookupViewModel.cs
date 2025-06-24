@@ -19,7 +19,6 @@ namespace osrs_toolbox
             PlayerName = string.Empty;
             DisplayOption = "Skills";
             DisplayOptions = ["Skills", "Activities", "Bosses"];
-            DisplayOutput = string.Empty;
             HiscoreInfo = new();
         }
 
@@ -30,7 +29,9 @@ namespace osrs_toolbox
 
         private async void DoPlayerLookup(object obj)
         {
-
+            HiscoreInfo = new();
+            PlayerInfoService pis = new(new());
+            HiscoreInfo = await pis.GetPlayerInfoAsync(PlayerName).ConfigureAwait(false);
         }
     }
 }
