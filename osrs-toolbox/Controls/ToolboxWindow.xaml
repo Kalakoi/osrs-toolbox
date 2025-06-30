@@ -6,7 +6,41 @@
              xmlns:local="clr-namespace:osrs_toolbox"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ControlTemplate x:Key="NoMouseOverButtonTemplate" TargetType="Button">
+            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="{x:Static SystemColors.ControlLightBrush}"/>
+                    <Setter Property="Foreground" Value="{x:Static SystemColors.GrayTextBrush}"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </UserControl.Resources>
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="/Resources/Panel/panel-background.png" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" Margin="-3"/>
+        <Image Source="/Resources/Panel/panel-left.png" Grid.Row="2" Grid.Column="0" Margin="0,-8,0,-8" Width="40" StretchDirection="Both" HorizontalAlignment="Stretch" VerticalAlignment="Top" Stretch="Fill"/>
+        <Image Source="/Resources/Panel/panel-bottom.png" Grid.Row="3" Margin="-8,0,-8,0" Grid.Column="1" Height="40" StretchDirection="Both" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Fill"/>
+        <Image Source="/Resources/Panel/panel-right.png" Grid.Row="2" Grid.Column="2" Margin="0,-8,0,-8" Width="40" StretchDirection="Both" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Fill"/>
+        <Image Source="/Resources/Panel/panel-top.png" Grid.Row="1" Margin="-8,0,-8,0" Grid.Column="1" Height="40" StretchDirection="Both" HorizontalAlignment="Left" VerticalAlignment="Bottom" Stretch="Fill" MouseDown="Move_Window"/>
+        <Image Source="/Resources/Panel/panel-top-left.png" Grid.Row="1" Grid.Column="0" Width="40" StretchDirection="Both" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseDown="Move_Window"/>
+        <Image Source="/Resources/Panel/panel-bottom-left.png" Grid.Row="3" Grid.Column="0" Height="40" StretchDirection="Both" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+        <Image Source="/Resources/Panel/panel-bottom-right.png" Grid.Row="3" Grid.Column="2" Width="40" StretchDirection="Both" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image Source="/Resources/Panel/panel-top-right.png" Grid.Row="1" Grid.Column="2" Width="40" StretchDirection="Both" HorizontalAlignment="Left" VerticalAlignment="Bottom" MouseDown="Move_Window"/>
+        <Rectangle Grid.Row="1" Grid.Column="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="22" Height="22" Fill="White" Margin="10,0,0,10" MouseDown="Close_Window" MouseEnter="Exit_Hovered" MouseLeave="Exit_Unhovered"/>
+        <Image Source="/Resources/close-button.png" Grid.Row="1" Grid.Column="2" StretchDirection="Both" Width="30" Margin="5,0,0,5" Stretch="Uniform" VerticalAlignment="Bottom" HorizontalAlignment="Left" IsHitTestVisible="False"/>
     </Grid>
 </UserControl>
